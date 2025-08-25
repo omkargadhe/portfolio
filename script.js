@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (!skillsContainer) return;
 
   // Dynamically fetch all image files from the assets folder for experience section
-  fetch('./images')
+  fetch('./assets/images')
     .then(response => response.text())
     .then(html => {
       // Create a DOM parser to extract file names from the directory listing
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const name = filename.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
         const article = document.createElement('article');
         const img = document.createElement('img');
-        img.src = `./images/${filename}`;
+        img.src = `./assets/images/${filename}`;
         img.alt = `${name} icon`;
         img.className = 'icon';
         const div = document.createElement('div');

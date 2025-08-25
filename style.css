@@ -358,7 +358,7 @@ section {
 }
 
 .experience-sub-title {
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -368,6 +368,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 2rem;
 }
 
 .article-container {
