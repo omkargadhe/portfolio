@@ -43,24 +43,8 @@ function toggleMenu() {
 }
 
 // Dark mode toggle logic
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const savedTheme = localStorage.getItem('theme');
 
-function setDarkMode(on) {
-  document.body.classList.toggle('dark-mode', on);
-  darkModeToggle.textContent = on ? '☀️' : '🌙';
-}
 
-// Initial theme
-if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-  setDarkMode(true);
-} else {
-  setDarkMode(false);
-}
 
-darkModeToggle.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark-mode');
-  darkModeToggle.textContent = isDark ? '☀️' : '🌙';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+
+
